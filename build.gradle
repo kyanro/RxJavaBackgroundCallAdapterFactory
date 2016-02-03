@@ -28,6 +28,9 @@ publishing {
             groupId 'com.kyanro'
             artifactId 'rxjava-background-calladapterfactory'
             version '0.1.1'
+
+            artifact sourcesJar
+            artifact javadocJar
         }
     }
 }
