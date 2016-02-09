@@ -3,7 +3,7 @@ package com.kyanro;
 import retrofit2.Call;
 import retrofit2.CallAdapter;
 import retrofit2.Retrofit;
-import retrofit2.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import rx.Observable;
 import rx.schedulers.Schedulers;
 
@@ -15,7 +15,7 @@ import java.lang.reflect.Type;
  * 主に移行の際の手間を軽減するために利用されることを想定。
  * 新規の場合はできるだけ{@link RxJavaCallAdapterFactory} を利用する。
  */
-public final class RxJavaBackgroundCallAdapterFactory implements CallAdapter.Factory {
+public final class RxJavaBackgroundCallAdapterFactory extends CallAdapter.Factory {
 
     public static RxJavaBackgroundCallAdapterFactory create() {
         return new RxJavaBackgroundCallAdapterFactory();
